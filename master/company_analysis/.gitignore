@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+*.csv
+*.xlsx
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+=======
+/input/*
+/output/*
+
+>>>>>>> c110a7c (add .gitignore)
