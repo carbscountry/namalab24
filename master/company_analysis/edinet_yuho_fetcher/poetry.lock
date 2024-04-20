@@ -987,6 +987,20 @@ files = [
 six = ">=1.5"
 
 [[package]]
+name = "python-dotenv"
+version = "1.0.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca"},
+    {file = "python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "python-pptx"
 version = "0.6.23"
 description = "Generate and manipulate Open XML PowerPoint (.pptx) files"
@@ -1319,6 +1333,16 @@ files = [
 ]
 
 [[package]]
+name = "utils"
+version = "1.0.2"
+description = "A grab-bag of utility functions and objects"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "utils-1.0.2.tar.gz", hash = "sha256:f4d5157e27e9d434006b5b52a1ec951a34e53e7ecaa145d43a153ec452eb5d9e"},
+]
+
+[[package]]
 name = "xlsxwriter"
 version = "3.2.0"
 description = "A Python module for creating Excel XLSX files."
@@ -1332,4 +1356,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "df51a3fab14b15b81b409e6ca72474a68380265b573188789208fbbf0b1f17df"
+content-hash = "a17764f5fb1ae8891ca51ea4502e7cd836c3521a696995178288459f43e6196e"
