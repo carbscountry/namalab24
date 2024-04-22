@@ -40,7 +40,7 @@ class DocumentListApi:
             else:
                 raise e
         docs = j_res["results"]
-        f_docs = [doc for doc in docs if doc["edinetCode"] == edinet_code and "有価証券報告書" in doc["docDescription"]]
+        f_docs = [doc for doc in docs if doc["edinetCode"] == edinet_code and "有価証券報告書" in doc["docDescription"] and "内国投資信託受益証券" not in doc["docDescription"]]
         if len(f_docs) <= 0:
             # print("no data was found.")
             return None

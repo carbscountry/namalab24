@@ -13,11 +13,11 @@ from DocumentListApi import DocumentListApi
 from DocumentAcquisitionApi import DocumentAcquisitionApi
 
 # Specify the path of the .env file to read
-load_dotenv = ('../.env')
+load_dotenv('../.env')
 
 # get api key
-# API_KEY = os.getenv('api_val')
-API_KEY = '363e4ec24f444bf194e4db503c3b4879'
+API_KEY = os.getenv('api_val')
+# API_KEY = '363e4ec24f444bf194e4db503c3b4879'
 print(f'api:{API_KEY}')
 
 def main():
@@ -80,14 +80,14 @@ def main():
                         f.write(f"{doc_id}\n")
                 print(f"save file: {doc_indice_fpath}")
 
-        # 文書を取得
-        doc_acq_api = DocumentAcquisitionApi(API_KEY)
-        data_type = 1#1:xbrl, 2:pdf, 5:csv
-        ext = "pdf" if data_type == 2 else "zip"
-        for doc_id in doc_indice:
-            doc_fname = f"{doc_id}_{data_type}.{ext}"
-            doc_fpath = os.path.join(data_dpath, "00_raw", doc_fname)
-            doc_acq_api.download(doc_id, doc_fpath, data_type)
+            # 文書を取得
+            doc_acq_api = DocumentAcquisitionApi(API_KEY)
+            data_type = 5 #1:xbrl, 2:pdf, 5:csv
+            ext = "pdf" if data_type == 2 else "zip"
+            for doc_id in doc_indice:
+                doc_fname = f"{doc_id}_{data_type}.{ext}"
+                doc_fpath = os.path.join(data_dpath, "00_raw", doc_fname)
+                doc_acq_api.download(doc_id, doc_fpath, data_type)
 
     except Exception as ex:
         print(ex)
