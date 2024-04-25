@@ -17,8 +17,6 @@ load_dotenv('../.env')
 
 # get api key
 API_KEY = os.getenv('api_val')
-# API_KEY = '363e4ec24f444bf194e4db503c3b4879'
-print(f'api:{API_KEY}')
 
 def main():
     try:
