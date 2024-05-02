@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "edinet-yuho-fetcher"
+version = "0.1.0"
+description = ""
+authors = ["masaki tsukada"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+polar = "^0.0.127"
+python-dotenv = "^1.0.1"
+utils = "^1.0.2"
+tqdm = "^4.66.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
